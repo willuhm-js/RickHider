@@ -17,7 +17,7 @@ app.post("/genRoller", async (req, res) => {
   let url = `https://${req.get("host")}/roller?`;
   for (key of Object.keys(req.body)) {
     if(req.body[key].length !== 0) {
-      url += `${encodeURIComponent(req.body[key])}&`;
+      url += `${key}=${encodeURIComponent(req.body[key])}&`;
     }
   }
   try {
