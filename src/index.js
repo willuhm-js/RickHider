@@ -31,4 +31,4 @@ app.get("/roller", (req, res) => {
   res.render("roller", { title, description, thumbnail, url });
 });
 
-app.listen(8080, () => console.log("Fertig"));
+app.listen(8080, () => console.log("Fertig!"));
