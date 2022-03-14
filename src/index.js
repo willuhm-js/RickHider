@@ -39,8 +39,8 @@ app.post("/genRoller", async (req, res) => {
 });
 
 app.get("/roller", (req, res) => {
-  const { title, description, thumbnail, url } = req.query;
-  res.render("roller", { title, description, thumbnail, url });
+  const { title, description, thumbnail } = req.query;
+  res.render("roller", { title, description, thumbnail });
 });
 
 app.get("/error/:code/:message", (req, res) => {
