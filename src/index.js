@@ -45,10 +45,11 @@ app.get("/roller", (req, res) => {
 
 app.get("/error/:code/:message", (req, res) => {
   const { code, message } = req.params;
-  try {
-    res.status(code).render("error.ejs", { message })
-  } catch {
-    res.status(500).render("error.ejs", { message: "Internal server error." })
+  const allowedCodes = [500, 400, 404, 429]
+  if (allowedCodes.includes(code)) {
+    res.status(code).render("error.ejs", { message });
+  } else {
+    res.status(500).render("error.ejs", { message: "Internal server error." });
   }
 })
 
