@@ -4,7 +4,7 @@
   "description": "A website for generating hidden rickrolls with custom metadata.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "keywords": ["rickroll"],
   "author": "William Faircloth",
