@@ -6,8 +6,8 @@
   
   <!-- Facebook Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="<%= title || 'Check this out!' %>">
-  <meta property="og:description" content="<%= description || 'I have something really cool to show you.' %>">
+  <meta property="og:title" content="<%= title || '' %>">
+  <meta property="og:description" content="<%= description || '' %>">
   <meta property="og:image" content="<%= thumbnail || '' %>">
   <meta property="og:url" content="<%= url || '' %>">
   
@@ -23,7 +23,7 @@
 <body style="padding: 0; margin: 0; background-color: black;" onpageshow="redirect()">
   <script>
     function redirect() {
-      window.location.href = "/rickroll.mp4"
+      window.location.pathname = "rickroll.mp4"
     }
   </script>
 </body>
