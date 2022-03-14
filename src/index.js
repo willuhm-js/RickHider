@@ -31,4 +31,4 @@ app.get("/roller", (req, res) => {
   res.render("roller", { title, description, thumbnail, url });
 });
 
-app.listen(process.env.POT || 8080, () => console.log("Fertig!"));
+app.listen(process.env.PORT || 8080, () => console.log("Fertig!"));
