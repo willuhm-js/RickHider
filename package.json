@@ -1,0 +1,17 @@
+{
+  "name": "rickhider",
+  "version": "1.0.0",
+  "description": "A website for generating hidden rickrolls with custom metadata.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["rickroll"],
+  "author": "William Faircloth",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "tinyurl-api": "^1.0.1"
+  }
+}
