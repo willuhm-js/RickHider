@@ -1,7 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
-const tinyurl = require("tinyurl-api");
+const tinyurl = require("tinyurl-shorten");
 const rateLimit = require("express-rate-limit");
 const join = (p) => path.join(__dirname, p); 
 
@@ -34,7 +34,7 @@ app.post("/genRoller", async (req, res) => {
   }
   try {
     url = await tinyurl(url);
-  } catch {}
+  } catch { return res.redirect("/error/500/Internal%20server%20error."); }
   res.render("success.ejs", { url })
 });
 
