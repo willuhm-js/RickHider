@@ -10,10 +10,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", join("views"));
-app.use(express.static(join("public")))
+app.use(express.static(join("public")));
+
+const { trustProxy } = require("./config");
+if (trustProxy) app.set("trust proxy", 1)
 
 app.use("/genRoller", rateLimit({
-  windowMs: 60 * 1000, // 60 seconds
+  windowMs: 60000, // 60 seconds
   max: 10, // 10 requests
   standardHeaders: true,
   legacyHeaders: false,
