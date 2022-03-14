@@ -15,6 +15,6 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-rate-limit": "^6.3.0",
-    "tinyurl-api": "^1.0.1"
+    "tinyurl-shorten": "^1.0.1"
   }
 }
