@@ -33,7 +33,8 @@ app.post("/genRoller", async (req, res) => {
     }
   }
   try {
-    url = await tinyurl(url);
+    let posUrl = await tinyurl(url);
+    if (posUrl !== "Error") url = posUrl;
   } catch { return res.redirect("/error/500/Internal%20server%20error."); }
   res.render("success.ejs", { url })
 });
