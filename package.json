@@ -1,6 +1,6 @@
 {
   "name": "rickhider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A website for generating hidden rickrolls with custom metadata.",
   "main": "src/index.js",
   "scripts": {
